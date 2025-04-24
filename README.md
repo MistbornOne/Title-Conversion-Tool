@@ -87,7 +87,7 @@ func main() {
 		line := scanner.Text()
 		titleCaseLine := strings.Title(line)
 
-// If you want the title to be bold every time, then use this option
+// If you want the title to be bold every time, then use this option and comment out the flag options
 	//for scanner.Scan() {
 		//line := scanner.Text()
 		//titleCaseLine := "**" + strings.Title(line) + "**"
@@ -126,7 +126,7 @@ func main() {
 
 ```
 
-**Step 4: Save and exit the file, then run the following code in the root directory:**
+**Step 4: Save and exit the file, then run the following code in the root directory of your project folder:**
 
 ```Bash
 go build -o title title.go
@@ -149,6 +149,7 @@ You should get a print out of: "Hello World"
 
 
 **Step 7: Add the keybindings to your keybinding.lua or init.lua file in your nvim config files:**
+
 Note, you will need to replace my filepath with your own filepath where you stored the _program_ (not the title.go file)
 
 ```Lua
@@ -190,17 +191,21 @@ The above keybinds can be tweaked to your liking.  I personally like my <leader>
 Then the keystrokes after that follow a logical pattern:  
 
 In Normal Mode:
-"<leader>ti" is for standard title conversion for the line your cursor is on.
 
-"<leader>tb" is for bold title conversion for the line your cursor is on.
+"`<leader>` ti" is for standard title conversion for the line your cursor is on.
 
-"<leader>th" is for heading title conversion for the line your cursor is on.
+"`<leader>` tb" is for bold title conversion for the line your cursor is on.
+
+"`<leader>` th" is for heading title conversion for the line your cursor is on.
 
 In Visual Mode:
-"<leader>ti" is for standard title conversion for the text you've highlighted.
+
+"`<leader>` ti" is for standard title conversion for the text you've highlighted.
 
 
-**Step 8: Test the program in nvim!  Navigate to a file in nvim and in normal mode, place your cursor on the line to be tested then try one or more of the keybindings.
+**Step 8: Test the program in nvim!:**  
+
+Navigate to a file in nvim and in normal mode, place your cursor on the line to be tested then try one or more of the keybindings.
 
 ---
 
